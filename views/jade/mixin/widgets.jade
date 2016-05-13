@@ -57,7 +57,9 @@ mixin inputNumber(key, field, value)
 
 mixin inputCheckbox(key, field, value)
   .widget
-    paper-checkbox(type='checkbox', name=key, id='form-#{key}', required=field.config.required || false, disabled=field.config.disabled || false value='1', checked=value) #{field.config.title}
+    input(type='checkbox', name=key, id='form-#{key}', required=field.config.required || false, disabled=field.config.disabled || false, value='true', checked=value) 
+    label(for='form-#{key}') #{field.config.title}
+    //paper-checkbox(type='checkbox', name=key, id='form-#{key}', required=field.config.required || false, disabled=field.config.disabled || false value='1', checked=value) #{field.config.title}
 
 mixin select(key, field, value)
   .widget
